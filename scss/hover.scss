@@ -355,9 +355,14 @@
 	@include double-top();
 }
 
-@import "effects/border-transitions/double-top";
-.#{$nameSpace}-double-top {
-	@include double-top();
+@import "effects/border-transitions/translate-fill-from-left";
+.#{$nameSpace}-translate-fill-from-left {
+	@include translate-fill-from-left();
+}
+
+@import "effects/border-transitions/translate-fill-from-right";
+.#{$nameSpace}-translate-fill-from-right {
+	@include translate-fill-from-right();
 }
 
 /* SHADOW/GLOW TRANSITIONS */
