@@ -365,7 +365,20 @@
 	@include double-top();
 }
 
+@import "effects/border-transitions/left-down-bottom-right";
+.#{$nameSpace}-left-down-bottom-right {
+	@include left-down-bottom-right();
+}
 
+@import "effects/border-transitions/left-up-bottom-right";
+.#{$nameSpace}-left-up-bottom-right {
+	@include left-up-bottom-right();
+}
+
+@import "effects/border-transitions/left-up-top-right";
+.#{$nameSpace}-left-up-top-right {
+	@include left-up-top-right();
+}
 
 /* SHADOW/GLOW TRANSITIONS */
 @import "effects/shadow-and-glow-transitions/glow";

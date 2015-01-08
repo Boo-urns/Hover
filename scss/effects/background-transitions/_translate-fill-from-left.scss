@@ -1,6 +1,8 @@
 /* Translate Fill From Left */
 @mixin translate-fill-from-left {
 	$duration: $mediumDuration;
+	@include prefixed(transition-property, color);
+	@include prefixed(transition-duration, $slowDuration);
 
 	@include hacks();
 	position: relative;
@@ -12,9 +14,9 @@
 		z-index: -1;
 		bottom: 0;
 		background: $activeColor;
-		height: 0;
+		height: 100%;
 		width: 100%;
-		@include prefixed(transition-property, "all");
+		@include prefixed(transition-property, transform);
 		@include prefixed(transition-duration, $duration);
 		@include prefixed(transform, translateX(-120%) rotate(30deg) scale(0));
 		@include prefixed(transition-timing-function, ease-out);
@@ -23,11 +25,9 @@
 	&:hover,
 	&:focus,
 	&:active {
+		color: #fff; 
 
 		&:before {
-			top: 0;
-			height: 100%;
-			width: 200%;
 			@include prefixed(transform, translateX(-30%) rotate(40deg) scale(4));
 			// scale is so massive to accomodate large buttons.
 		}

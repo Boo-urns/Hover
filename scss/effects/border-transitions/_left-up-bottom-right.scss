@@ -1,47 +1,48 @@
-/* Under-from-right-over-from-left */
-@mixin under-from-right-over-from-left {
-	$duration: $mediumDuration;
+/* Left Up Bottom Right */
+@mixin left-up-bottom-right {
+	$duration: $fastDuration;
 
 	@include hacks();
 	position: relative;
-	overflow: hidden; 
+	overflow: hidden;
 
 	&:before {
 		content: "";
 		position: absolute;
 		z-index: -1;
-		width: 100%;
 		left: 0;
 		bottom: 0;
 		background: $activeColor;
-		height: 2px;
+		height: 100%;
+		width: 2px;
 		@include prefixed(transition-property, transform);
 		@include prefixed(transition-duration, $duration);
-		@include prefixed(transform, translateX(100%));
+		@include prefixed(transform, translateY(100%));
 		@include prefixed(transition-timing-function, ease-out);
 	}
-	
 	&:after {
 		content: "";
 		position: absolute;
 		z-index: -1;
-		width: 100%;
-		top: 0;
 		left: 0;
+		bottom: 0;
 		background: $activeColor;
 		height: 2px;
+		width: 100%;
 		@include prefixed(transition-property, transform);
 		@include prefixed(transition-duration, $duration);
+		//@include prefixed(transition-delay, $duration);
 		@include prefixed(transform, translateX(-100%));
 		@include prefixed(transition-timing-function, ease-out);
-
 	}
 
 	&:hover,
 	&:focus,
 	&:active {
 
-		&:before,
+		&:before {
+			@include prefixed(transform, translateY(0));
+		}
 		&:after {
 			@include prefixed(transform, translateX(0));
 		}
