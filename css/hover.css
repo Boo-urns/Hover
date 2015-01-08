@@ -1679,6 +1679,76 @@
       -webkit-transform: scaleY(1);
       transform: scaleY(1); }
 
+/* Translate Fill From Left */
+.hvr-translate-fill-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden; }
+  .hvr-translate-fill-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    background: #2098D1;
+    height: 0;
+    width: 100%;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transform: translateX(-120%) rotate(30deg) scale(0);
+    transform: translateX(-120%) rotate(30deg) scale(0);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  .hvr-translate-fill-from-left:hover:before, .hvr-translate-fill-from-left:focus:before, .hvr-translate-fill-from-left:active:before {
+    top: 0;
+    height: 100%;
+    width: 200%;
+    -webkit-transform: translateX(-30%) rotate(40deg) scale(4);
+    transform: translateX(-30%) rotate(40deg) scale(4); }
+
+/* Translate Fill From Right*/
+.hvr-translate-fill-from-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden; }
+  .hvr-translate-fill-from-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    background: #2098D1;
+    height: 0;
+    width: 100%;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transform: translateX(120%) rotate(40deg) scale(0);
+    transform: translateX(120%) rotate(40deg) scale(0);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  .hvr-translate-fill-from-right:hover:before, .hvr-translate-fill-from-right:focus:before, .hvr-translate-fill-from-right:active:before {
+    top: 0;
+    height: 100%;
+    width: 200%;
+    -webkit-transform: translateX(-30%) rotate(30deg) scale(4);
+    transform: translateX(-30%) rotate(30deg) scale(4); }
+
 /* 3D Transitions */
 /* fall */
 .hvr-fall {
@@ -2469,76 +2539,6 @@
   .hvr-double-top:hover:after, .hvr-double-top:focus:after, .hvr-double-top:active:after {
     -webkit-transform: translateY(6px);
     transform: translateY(6px); }
-
-/* Translate Fill From Left */
-.hvr-translate-fill-from-left {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden; }
-  .hvr-translate-fill-from-left:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    background: #2098D1;
-    height: 0;
-    width: 100%;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transform: translateX(-120%) rotate(30deg) scale(0);
-    transform: translateX(-120%) rotate(30deg) scale(0);
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out; }
-  .hvr-translate-fill-from-left:hover:before, .hvr-translate-fill-from-left:focus:before, .hvr-translate-fill-from-left:active:before {
-    top: 0;
-    height: 100%;
-    width: 200%;
-    -webkit-transform: translateX(-30%) rotate(40deg) scale(4);
-    transform: translateX(-30%) rotate(40deg) scale(4); }
-
-/* Translate Fill From Right*/
-.hvr-translate-fill-from-right {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  overflow: hidden; }
-  .hvr-translate-fill-from-right:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    background: #2098D1;
-    height: 0;
-    width: 100%;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transform: translateX(120%) rotate(40deg) scale(0);
-    transform: translateX(120%) rotate(40deg) scale(0);
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out; }
-  .hvr-translate-fill-from-right:hover:before, .hvr-translate-fill-from-right:focus:before, .hvr-translate-fill-from-right:active:before {
-    top: 0;
-    height: 100%;
-    width: 200%;
-    -webkit-transform: translateX(-30%) rotate(30deg) scale(4);
-    transform: translateX(-30%) rotate(30deg) scale(4); }
 
 /* SHADOW/GLOW TRANSITIONS */
 /* Glow */

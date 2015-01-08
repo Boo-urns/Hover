@@ -238,6 +238,16 @@
 	@include shutter-out-vertical();
 }
 
+@import "effects/background-transitions/translate-fill-from-left";
+.#{$nameSpace}-translate-fill-from-left {
+	@include translate-fill-from-left();
+}
+
+@import "effects/background-transitions/translate-fill-from-right";
+.#{$nameSpace}-translate-fill-from-right {
+	@include translate-fill-from-right();
+}
+
 /* 3D Transitions */
 @import "effects/3d-transitions/fall";
 .#{$nameSpace}-fall {
@@ -355,15 +365,7 @@
 	@include double-top();
 }
 
-@import "effects/border-transitions/translate-fill-from-left";
-.#{$nameSpace}-translate-fill-from-left {
-	@include translate-fill-from-left();
-}
 
-@import "effects/border-transitions/translate-fill-from-right";
-.#{$nameSpace}-translate-fill-from-right {
-	@include translate-fill-from-right();
-}
 
 /* SHADOW/GLOW TRANSITIONS */
 @import "effects/shadow-and-glow-transitions/glow";
