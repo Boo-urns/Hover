@@ -238,6 +238,11 @@
 	@include shutter-out-vertical();
 }
 
+/* 3D Transitions */
+@import "effects/3d-transitions/fall";
+.#{$nameSpace}-fall {
+	@include fall();
+}
 
 /* BORDER TRANSITIONS */
 @import "effects/border-transitions/border-fade";
@@ -325,6 +330,30 @@
 	@include overline-reveal();
 }
 
+@import "effects/border-transitions/underoverline";
+.#{$nameSpace}-underoverline {
+	@include underlineoverline();
+}
+
+@import "effects/border-transitions/under-from-left-over-from-right";
+.#{$nameSpace}-under-from-left-over-from-right {
+	@include under-from-left-over-from-right();
+}
+
+@import "effects/border-transitions/under-from-right-over-from-left";
+.#{$nameSpace}-under-from-right-over-from-left {
+	@include under-from-right-over-from-left();
+}
+
+@import "effects/border-transitions/double-bottom";
+.#{$nameSpace}-double-btm {
+	@include double-btm();
+}
+
+@import "effects/border-transitions/double-top";
+.#{$nameSpace}-double-top {
+	@include double-top();
+}
 
 /* SHADOW/GLOW TRANSITIONS */
 @import "effects/shadow-and-glow-transitions/glow";

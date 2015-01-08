@@ -1,0 +1,45 @@
+/* Underoverline */
+@mixin underlineoverline {
+	$duration: $fastDuration;
+
+	@include hacks();
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $activeColor;
+		height: 0px;
+		@include prefixed(transition-property, "height");
+		@include prefixed(transition-duration, $duration);
+		@include prefixed(transition-timing-function, ease-out);
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		top: 0;
+		background: $activeColor;
+		height: 0px;
+		@include prefixed(transition-property, "height");
+		@include prefixed(transition-duration, $duration);
+		@include prefixed(transition-timing-function, ease-out);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		&:before,
+		&:after {
+			height: 4px;
+		}
+	}
+}

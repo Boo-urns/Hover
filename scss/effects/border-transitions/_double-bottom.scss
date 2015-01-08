@@ -1,0 +1,43 @@
+/* Double Bottom */
+@mixin double-btm {
+	$duration: $mediumDuration;
+
+	@include hacks();
+	position: relative;
+	overflow: hidden;
+
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $activeColor;
+		height: 4px;
+		@include prefixed(transform, translateY(4px));
+		@include prefixed(transition-property, transform);
+		@include prefixed(transition-duration, $fastDuration);
+		@include prefixed(transition-timing-function, ease-out);
+	}
+
+	&:after {
+		height: 1px;
+		z-index: -2;
+		background: $activeColor;
+		@include prefixed(transition-duration, $duration);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		&:before {
+			@include prefixed(transform, translateY(0));
+		}
+		&:after {
+			@include prefixed(transform, translateY(-6px));
+		}
+	}
+}
