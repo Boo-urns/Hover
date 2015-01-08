@@ -8,7 +8,7 @@
  * Made available under a MIT License:
  * http://www.opensource.org/licenses/mit-license.php
 
- * Hover.css Copyright Ian Lunn 2014. Generated with Sass.
+ * Hover.css Copyright Ian Lunn 2014. Generated with SASS.
  */
 /* 2D TRANSITIONS */
 /* Grow */
@@ -2427,6 +2427,48 @@
   .hvr-double-btm:hover:after, .hvr-double-btm:focus:after, .hvr-double-btm:active:after {
     -webkit-transform: translateY(-6px);
     transform: translateY(-6px); }
+
+/* Double Top */
+.hvr-double-top {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden; }
+  .hvr-double-top:before, .hvr-double-top:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  .hvr-double-top:after {
+    height: 1px;
+    z-index: -2;
+    background: #2098D1;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+  .hvr-double-top:hover:before, .hvr-double-top:focus:before, .hvr-double-top:active:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  .hvr-double-top:hover:after, .hvr-double-top:focus:after, .hvr-double-top:active:after {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px); }
 
 /* Double Top */
 .hvr-double-top {
